@@ -1,11 +1,11 @@
 # 30daysofreact
 [Working through 30 Days of React Guide](https://www.fullstackreact.com/30-days-of-react/).
-Intend to become more fluent in React & React best practices in order to use React for personal projects. "Days" will be broken into folders for easy review. PDF also included so changes to site/loss of site will not kill this.
+Intend to become more fluent in React & React best practices in order to use React for personal projects. "Days" will be broken into folders for easy review. PDF also included so changes to site/loss of site will not invalidate review.
 
 
 ## Progress
 * [x] Day 1
-* [ ] Day 2
+* [x] Day 2
 * [ ] Day 3
 * [ ] Day 4
 * [ ] Day 5
