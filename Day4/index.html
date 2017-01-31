@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Hello world</title>
+  <!-- Script tags including React -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react-dom.min.js"></script>
+  <script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script>
+</head>
+<body>
+  <div id="app"></div>
+  <script type="text/babel">
+    //it feels really gross to just inline all this but here goes
+    class App extends React.Component{
+      render(){
+        return(
+          <div className="notificationsFrame">
+            <div className="panel">
+              {/* this is how you comment inside JSX */}
+              <Header /> //make use of header component
+              <Content /> //make use of massive content component that is begging to be broken out
+            </div>
+          </div>
+        );
+      }
+    }
+
+    class Header extends React.Component{
+      render(){
+        return  (
+          <div className="header">
+            <div className="fa fa-more"></div>
+
+            <span className="title">Timeline</span>
+
+            <input
+              type="text"
+              className="searchInput"
+              placeholder="Search ..." />
+
+            <div className="fa fa-search searchIcon"></div>
+          </div>
+        );
+      }
+    }
+
+    class Content extends React.Component{
+      render(){
+        return(
+          <div className="content">
+            <div className="line"></div>
+            <div className="item">
+
+              <div className="avatar">
+                <img src="http://www.croop.cl/UI/twitter/images/doug.jpg" />
+                Doug
+              </div>
+
+              <span className="time">
+                An hour ago
+              </span>
+              <p>Ate lunch</p>
+            </div>
+
+            <div className="item">
+              <div className="avatar">
+                <img src="http://www.croop.cl/UI/twitter/images/doug.jpg" />
+              </div>
+
+              <span className="time">10 am</span>
+              <p>Read Day two article</p>
+            </div>
+          </div>
+        );
+      }
+    }
+    const mount = document.querySelector('#app'); //where
+    ReactDOM.render(<App />, mount);//renders our new parent component to #app element
+  </script>
+</body>
+</html>
